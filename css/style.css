@@ -1,8 +1,15 @@
 *{ /*generel styling for all elements*/
     box-sizing: border-box;
     margin: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Inter", sans-serif;
     padding: 0;
+}
+
+.inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
 }
 
 img {
@@ -110,6 +117,24 @@ nav a:hover{
     transition: 0.5s; /*skaber en mere blød overgang mellem linkfarverne*/
 }
 
+
+/*Hop ned til hovedindhold. Kode hentet fra: https://www.a11y-collective.com/blog/skip-to-main-content */
+.screen-reader-text {
+  position: absolute; /*Positions the link absolutely on the page, allowing it to be placed anywhere.*/
+  left: -9999px; /*Moves the link far off-screen to the left, making it invisible to sighted users.*/
+  z-index: 999; /*Sets a high z-index, ensuring that the link will be on top of other page elements if it becomes visible.*/
+  padding: 1em;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  opacity: 0; /*Sets the link's opacity to 0, making it fully transparent and invisible.*/
+}
+ 
+.screen-reader-text:focus {
+  left: 50%; /* When the link receives focus (e.g., when a keyboard user tabs to it), it is repositioned horizontally to the centre of the screen.*/
+  transform: translateX(-50%); /*This centres the link horizontally by moving it back to the left by 50% of its own width.*/
+  opacity: 1; /*The link's opacity is set to 1, making it fully visible.*/
+}
+
 main{
     flex: 1;
     padding: 0 2em 2em;
@@ -179,7 +204,7 @@ main{
 
 
 body {
-    font-family: Plus Jakarta Sans, sans-serif;
+    font-family: "inter", sans-serif;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -205,7 +230,7 @@ h1{
 }
 .hero p{
     font-size: 1.2em;
-    line-height: 1.5;
+    line-height: 1.6;
     margin-top: 0.5em;
     margin: 0 0 1.2em 0;
     margin-bottom: 1em;
@@ -262,7 +287,7 @@ h1{
     flex-direction: column;
     justify-content: center;
     gap: 15px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "inter", sans-serif;
 }
 
 .main-box h2 {
@@ -292,9 +317,10 @@ h1{
 
 .small-boxes-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     column-gap: 18px;
     row-gap: 20px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+grid-auto-rows: 1fr;
 }
 
 .small-box {
@@ -312,6 +338,17 @@ h1{
     justify-content: space-between;
 }
 
+.small-box > a {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: auto 0;
+}
+
+.small-box > a img {
+    max-width: 100%;
+}
+
 .small-box img {
     max-width: 80%;
     height: auto;
@@ -325,17 +362,20 @@ h1{
    font-weight: 600;
 }
 
-/*infobokse på haanbog siden*/
+.vend-tilbage {
+    padding: 20px;
+}
 
-.infoboks-grid {
+/*infobokse til guide sider*/
+.infoboks-top-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 18px;
     row-gap: 20px;
 }
 
-.infoboks {
-    background-color: #f3c65f;
+.infoboks-guide {
+    background-color: #f8fafc;
     border: 2px solid #26456e;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 16px;
@@ -346,35 +386,58 @@ h1{
     justify-content: center;
     gap: 15px;
     font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 2rem;
 }
 
-.infoboks-grid h2 {
+.infoboks-top-grid h2 {
     font-size: 28px;
     line-height: 1.2;
 }
 
-.infoboks-grid p {
+.infoboks-top-grid p {
     font-size: 18px;
     line-height: 1.6;
     max-width: 55ch;
-
 }
 
-/* Ikoner Gør i øjeblikket ikke noget */
-.ikoner {
+.guides-infoside {
+    background-color: #f3c65f;
+    
     display: flex;
-    gap: 12px;
-    margin-top: 8px;
-    height: 100px;
-    width: auto;
-    float: right;
 }
 
-.socialmedia {
-    margin-top: 1px;
-    height: 35px;
-    width: auto;
+#ai-mainguide .guides-infoside {
+    width: calc(100% + 4em);
+    margin-left: -2em;
+    justify-content: center;
+    align-items: center;
+    padding-block: 2rem;
 }
+
+.guide-info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 18rem));
+    justify-content: center;
+    gap: 1rem;
+    column-gap: 18px;
+    row-gap: 20px;
+}
+
+.guide-mini {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    width: 100%;
+    max-width: 18rem;
+    padding: 1.5rem;
+    line-height: 1.6;;
+    border: 2px solid #26456e;
+    border-radius: 16px;
+    background: #f8fafc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 
 /*Håndbog opstilling*/
 .hero-2 {
@@ -470,6 +533,68 @@ h1{
     margin-top: auto;
 }
 
+/*infobokse på haandbog siden*/
+
+.infoboks-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 18px;
+    row-gap: 20px;
+}
+
+.infoboks {
+    background-color: #f3c65f;
+    border: 2px solid #26456e;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    min-height: 280px;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.infoboks-grid h2 {
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+.infoboks-grid p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 55ch;
+
+}
+
+.hero-3 {
+    background-color: #f3c65f;
+    padding: 1.5em;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+    border-radius: 20px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#ai-mainguide .hero-3 {
+    position: relative;
+    min-height: 180px;
+    margin: 1rem auto 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ai-mainguide .hero-3 .hero-content-2 {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    z-index: 1;
+    text-align: center;
+}
+
 /*kontaktside boks*/
 .boks-info {
     background-color: #f8fafc;
@@ -479,7 +604,7 @@ h1{
     flex-direction: column;
     justify-content: center;
     gap: 15px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "inter", sans-serif;
 }
 
 .boks-info-content {
@@ -498,6 +623,7 @@ h1{
 
 .boks-info h4 {
     padding-bottom: 1rem;
+    font-size: 20px;
 }
 
 .boks-info p {
@@ -723,7 +849,7 @@ footer a {
         padding: 0;
         background-color: #26456e;
         width: 100%;
-        z-index: 1;
+        z-index: 2;
     }
 
     .nav-menu.show li {
@@ -768,6 +894,30 @@ footer a {
     grid-template-columns: 1fr;
     row-gap: 35px;
     justify-items: center;
+}
+
+.infoboks-grid {
+    grid-template-columns: 1fr;
+    row-gap: 35px;
+    justify-items: center;
+}
+
+/*Regler for ai-guide bokse*/
+
+.infoboks-top-grid {
+    grid-template-columns: 1fr;
+    row-gap: 35px;
+    justify-items: center;
+}
+
+.guide-info-grid {
+    grid-template-columns: 1fr;
+    row-gap: 35px;
+    justify-items: center;
+}
+
+.kontaktform {
+    width: 100%;
 }
 
 }

@@ -6,15 +6,22 @@
      <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script><!--henter javascript fil ind. Her indsættes så HTML loader før JS-->
     <script src="https://kit.fontawesome.com/8764c8bd7f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- skip ned til hovedindhold-->
+     <a href="#haandbog-main" class="screen-reader-text">Hop ned til sidens hovedindhold</a>
+
+    <!--Start navigation-->
      <header>
         <nav class="navbar">
 
-        <a class="logo" href="index.html"><img src="img/LogoDH.png" alt="logo er et skjold med DH skrevet"></a>
+        <a class="logo" href="index.html"><img src="img/LogoDH.png" alt="logo er et skjold med DH for Digital Håndbog skrevet"></a>
 
             <!-- søgefelt i navigationsbaren -->
-         <form class="search-form" role="search" action="search.html" method=""get">
+         <form class="search-form" role="search" action="search.html" method="get">
         <label for="site-search" class="visually-hidden">
             søg
         </label>
@@ -49,7 +56,7 @@
         </nav>
     </header>
 
-<main>
+<main id="haandbog-main">
 
     <section class="hero-2">
             <img src="img/teenager-med-mobil.png" alt="Ung person bruger en mobiltelefon">
@@ -71,47 +78,47 @@
                 <article class="guide-card">
                     <img src="img/laptop.png" alt="billede af en computer med hængelås på skaerm">
                     <h3>AI ChatGPT og Gemini</h3>
-                    <a class="retro-mere" href="#guide">læs guide</a>
+                    <a class="retro-mere" href="ai-guide.html" alt="læs guiden om ai software som chatgpt og gemini">læs guide</a>
                 </article>
                  <article class="guide-card">
                     <img src="img/skjoldmobil.png" alt="billede af mobil med skjold og flueben foran">
                     <h3>Sikker login</h3>
-                    <a class="retro-mere" href="#guide">læs guide</a>
+                    <a class="retro-mere" href="#guide" alt="læs guiden om sikker login">læs guide</a>
                 </article>
                 <article class="guide-card">
                     <img src="img/discord-logo.png" alt="logo af programmet Discord">
                     <h3>Discord</h3>
-                    <a class="retro-mere" href="#guide">læs guide</a>
+                    <a class="retro-mere" href="#guide" alt="læs guiden om platformen discord">læs guide</a>
                 </article>
 
                 <article class="guide-card">
                     <img src="img/snapchat-logo.png" alt="snapchat logo">
                     <h3>Snapchat</h3>
-                    <a class="retro-mere" href="#guide">læs guide</a>
+                    <a class="retro-mere" href="#guide" alt="læs guiden om platformen snapchat">læs guide</a>
                 </article>
 
                 <article class="guide-card">
                     <img src="img/facebook-logo.png" alt="facebook logo">
                     <h3>Facebook</h3>
-                    <a class="retro-mere" href="#guide">læs guide</a>
+                    <a class="retro-mere" href="#guide" alt="læs guiden om platformen Facebook">læs guide</a>
                 </article>
 
                 <article class="guide-card">
                     <img src="img/twitch-platform-logo.png" alt="twitch logo">
                     <h3>Twitch</h3>
-                    <a class="retro-mere" href="#guide">læs guide</a>
+                    <a class="retro-mere" href="#guide" alt="læs guiden om platformen twitch tv">læs guide</a>
                 </article>
 
                 <article class="guide-card">
                     <img src="img/instagram-logo-stor.png" alt="instagram logo">
                     <h3>Instagram</h3>
-                    <a class="retro-mere" href="#guide">læs guide</a>
+                    <a class="retro-mere" href="#guide" alt="læs guiden om platformen instagram">læs guide</a>
                 </article>
 
                 <article class="guide-card">
                     <img src="img/Youtube-logo.png" alt="youtube logo">
                     <h3>Youtube</h3>
-                    <a class="retro-mere" href="#guide">læs guide</a>
+                    <a class="retro-mere" href="#guide" alt="læs guiden om platformen youtube">læs guide</a>
                 </article>
               
             </div>
@@ -133,8 +140,17 @@
             </div>
 
             <div class="infoboks">
-                <h2>Boks 2</h2>
-                <p>Skriv uddybende info om et emne</p>
+                <h2>Tænk altid kritisk!</h2>
+                <p>Internettet er fyldt med billeder, videoer og informationer, som altid er lige ved hånden, men det er ikke altid sandheden man ser. Derfor er det meget vigtigt at være kritisk over for alt, du ser og læser. Stil dig selv følgende spørgsmål: 
+                </p>
+                <ul class="vigtige-punkter">
+                    <li><p>Hvem fortæller om informationen?</p></li>
+                    <li><p>Kan jeg stole på kilden/personen?</p></li>
+                    <li><p>Er indholdet manipuleret?</p></li>
+                    <li><p>Er det taget ud af kontekst?</p></li>
+                    <li><p>Kan jeg finde samme information et andet sted?</p></li>
+                    <li><p>Er det en skjult reklame?</p></li>
+                </ul>
                 
             </div>
             </div>

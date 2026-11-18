@@ -3,21 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guide til tryg online liv</title>
+    <title>Digital Håndbog</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script><!--henter javascript fil ind. Her indsættes så HTML loader før JS-->
     <script src="https://kit.fontawesome.com/8764c8bd7f.js" crossorigin="anonymous"></script>
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
-<body>
 
+<body>
+    <!-- skip ned til hovedindhold-->
+     <a href="#hovedindhold" class="screen-reader-text">Hop ned til sidens hovedindhold</a>
+
+
+     <!--Start navigation-->
     <header>
         <nav class="navbar">
 
-        <a class="logo" href="index.html"><img src="img/LogoDH.png" alt="logo er et skjold med DH skrevet"></a>
+        <a class="logo" href="index.html"><img src="img/LogoDH.png" alt="logo er et skjold med DH for Digital Håndbog skrevet"></a>
 
         <!-- søgefelt i navigationsbaren -->
-         <form class="search-form" role="search" action="search.html" method=""get">
+         <form class="search-form" role="search" action="search.html" method="get">
         <label for="site-search" class="visually-hidden">
             søg
         </label>
@@ -54,7 +61,7 @@
     </header>
 
 
-    <main>
+    <main id="hovedindhold">
        <section class="hero">
             <img class="hero-image" src="img/teenager-laptop-cover.jpg" alt="En ung pige sidder i en sofa og bruger en bærbar computer.">
             <div class="hero-content">
@@ -77,23 +84,22 @@
             <!--Højre side med små bokse her-->
             <div class="small-boxes-grid">
                 <div class="small-box">
-                    
-                    <img src="img/laptop.png">
+                    <a href="ai-guide.html"><img src="img/laptop.png" alt="vektor billede af en bærbar med hængelås."></a>
                     <p>AI - ChatGPT og Gemini</p>
                 </div> 
                 <div class="small-box">
                    
-                    <img src="img/skjoldmobil.png">
+                    <a href="haandbog.html"><img src="img/skjoldmobil.png" alt="vektor billede af en smartphone med et skjold foran, hvor der ses et flueben."></a>
                      <p>Kommunikations platforme</p>
                 </div>
                 <div class="small-box">
 
-                    <img src="img/lockfiles.png">
+                    <a href="haandbog.html"><img src="img/lockfiles.png" alt="vektor billede af en åben filmappe og en lukket hængelås."></a>
                     <p>Sikkerhed og backup</p>
                 </div>
                 <div class="small-box">
-                    <img src="img/SoMeIcon.png">
-                    <p>Guide til sociale medie platforme</p>
+                    <a href="haandbog.html"><img src="img/SoMeIcon.png" alt="vektor billede af taleboble, play knap, telefon og megafon."></a>
+                    <p>Guide til sociale medier platforme</p>
                 </div>
             </div>
             </div>

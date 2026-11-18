@@ -6,18 +6,24 @@
      <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script><!--henter javascript fil ind. Her indsættes så HTML loader før JS-->
     <script src="https://kit.fontawesome.com/8764c8bd7f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+     <!-- skip ned til hovedindhold-->
+     <a href="#kontaktindhold" class="screen-reader-text">Hop ned til sidens hovedindhold</a>
+
+
     <!--Start navigation-->
     <header>
         <nav class="navbar">
 
-        <a class="logo" href="index.html"><img src="img/LogoDH.png" alt="logo er et skjold med DH skrevet"></a>
+        <a class="logo" href="index.html"><img src="img/LogoDH.png" alt="logo er et skjold med DH for Digital Håndbog skrevet"></a>
 
 
             <!-- søgefelt i navigationsbaren -->
-         <form class="search-form" role="search" action="search.html" method=""get">
+         <form class="search-form" role="search" action="search.html" method="get">
         <label for="site-search" class="visually-hidden">
             søg
         </label>
@@ -52,6 +58,8 @@
         </nav>
     </header>
 
+    <main id="kontaktindhold">
+
     <!-- Indhold før kontaktboks-->
      <section class="boks-info">
         <div class="boks-info-content">
@@ -67,7 +75,7 @@
 
 
      <!--Kontaktform - hovedindhold--> 
-    <main class="kontaktform">
+    <section class="kontaktform">
         <h2>Skriv til os</h2>
             <p class="kontakt-tekst">Send os dine spørgsmål og vi vender tilbage hurtigst muligt</p>
 
@@ -142,6 +150,8 @@
                 
             </div>
         </div>
+    </section>
+    </main>
     </footer>
 </body>
 </html>
