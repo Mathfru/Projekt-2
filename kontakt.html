@@ -1,0 +1,147 @@
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script><!--henter javascript fil ind. Her indsættes så HTML loader før JS-->
+    <script src="https://kit.fontawesome.com/8764c8bd7f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <!--Start navigation-->
+    <header>
+        <nav class="navbar">
+
+        <a class="logo" href="index.html"><img src="img/LogoDH.png" alt="logo er et skjold med DH skrevet"></a>
+
+
+            <!-- søgefelt i navigationsbaren -->
+         <form class="search-form" role="search" action="search.html" method=""get">
+        <label for="site-search" class="visually-hidden">
+            søg
+        </label>
+    
+        <input 
+            type="search"
+            id="site-search"
+            name="q"
+            placeholder="søg">
+        
+        <button type="submit" aria-label="søg">
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        </button></form>
+
+         <!--bars til dropdown-->
+            <button
+                id="bars"
+                aria-expanded="false"
+                aria-controls="nav-menu"
+                aria-label="åben navigation">
+            
+                <!-- aria expansion fortæller skærmlæser at menu er lukket, mens aria-klabel giver besked om hvad knappen gør-->
+                 <!--button gør menuen trykbar med tastatur-->
+            <i class="fa-solid fa-bars"></i></button>
+
+         <!--Almindelig navigation-->
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">Forside</a></li>
+                <li><a href="haandbog.html">Håndbog</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Indhold før kontaktboks-->
+     <section class="boks-info">
+        <div class="boks-info-content">
+        <h2>Fandt du ikke svar på dine spørgsmål?</h2>
+        <div class="kontaktinfo">
+         <h4>Kontaktinfo</h4>
+            <p>Telefon: <a href="tel:25887799">25887799</a></p>
+            <p>Email: <a href="mailto:info@DGbog.dk">info@DGbog.dk</a></p>
+            <p>Adresse: <span>Gadenavn 1, 1234 Bynavn</span></p>
+            </div>
+            </div>
+     </section>
+
+
+     <!--Kontaktform - hovedindhold--> 
+    <main class="kontaktform">
+        <h2>Skriv til os</h2>
+            <p class="kontakt-tekst">Send os dine spørgsmål og vi vender tilbage hurtigst muligt</p>
+
+        <form>
+            <label class="visually-hidden" for="navn">Navn</label>
+            <input id="navn" type="text" placeholder="Navn"required>
+
+            <label class="visually-hidden" for="mail">E-mail</label>
+            <input id="mail" type="email" placeholder="E-mail" required>
+    
+
+            <!--Checkbox af services-->
+            <fieldset class="checkbox">
+                <legend>Hvilke emner omhandler dette?</legend>
+                <div>
+                    <input type="checkbox" id="privatliv">
+                    <label for="privatliv">Privatliv</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="online-svindel">
+                    <label for="online-svindel">Online svindel</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="ai">
+                    <label for="ai">AI</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="sikkerhed">
+                    <label for="sikkerhed">Sikkerhed</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="andet">
+                    <label for="andet">Andet</label>
+                </div>
+            </fieldset>
+
+            <label for="besked">Skriv dit spørgsmål her</label>
+            <textarea id="besked" cols="30" rows="10"></textarea>
+
+                <input type="submit" name="submit" value="send besked">
+            </form>
+
+        </main> 
+
+
+         <footer>
+        <div class="footer-content">
+            <div class="left-footer">
+            <h4>Kontaktinfo</h4>
+            <p>Telefon: <a href="tel:25887799">25887799</a></p>
+            <p>Email: <a href="mailto:info@DGbog.dk">info@DGbog.dk</a></p>
+            <p>Adresse: <span>Gadenavn 1, 1234 Bynavn</span></p>
+          
+        </div>
+        
+        <div class="right-footer">
+            <h4>Sociale medier</h4>
+            <nav aria-label="Sociale medier">
+                <ul class="social-links">
+                    <li><a href="https://www.instagram.com/ibakolding/" target="_blank">
+                        <img src="img/icons/instagram.png" class="socialmedia" alt="Instagram icon">
+                    </a></li>
+                    <li><a href="https://www.facebook.com/IBAErhvervsakademiKolding" target="_blank">
+                        <img src="img/icons/facebook.png" class="socialmedia" alt="Facebook icon">
+                    </a></li>
+                </ul>
+            </nav>
+            <div class="copyright">
+                <p class="footer">&copy; 2026 Digital Håndbog</p>
+                <img src="img/logoplaceholder.png" alt="Digital håndbog logo i form af skjold" class="footer-logo">
+                
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

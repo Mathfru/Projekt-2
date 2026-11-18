@@ -1,0 +1,779 @@
+*{ /*generel styling for all elements*/
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/*Navigation*/
+nav #bars {
+    display: none;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    height: 80px;
+    background-color: #26456e;
+}
+
+
+
+header{
+    text-align: center;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.logo img{
+    height: 50px;
+}
+
+/*søgefelt*/
+.search-form {
+    display: flex;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 200px;
+    flex-shrink: 1;
+    min-width: 0;
+    margin-left: auto;
+    background-color: #f8fafc;
+    border-radius: 50px;
+    padding: 0 0.5rem 0 1rem;
+    box-sizing: border-box;
+}
+
+/*inden i søgefeltet*/
+.search-form input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 0.6rem 0;
+    font-size: 1rem;
+    color: #1f1814;
+
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+
+
+/*søgeknap*/
+.search-form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: inherit;
+    border: none;
+    background: transparent;
+    color: #1f1814
+}
+
+.search-form input:focus-visible, 
+.search-form button:focus-visible {
+    outline: 2px solid #E87968;
+    border-radius: 4px;
+}
+
+.nav-menu {
+    margin: left;
+    padding: 0;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav li {
+    display: inline-block;
+}
+nav li a {
+    text-decoration: none;
+    padding: 1em;
+    font-size: 20px;
+    color:#fafafa;
+    text-transform: uppercase;
+}
+
+nav a:hover{
+    color: #E87968;
+    transition: 0.5s; /*skaber en mere blød overgang mellem linkfarverne*/
+}
+
+main{
+    flex: 1;
+    padding: 0 2em 2em;
+}
+
+
+.hero {
+    position: relative;
+    width: calc(100% + 4em);
+    margin-left: -2em;
+    aspect-ratio: 16 / 7;
+    min-height: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 2em;
+    margin-top: 0;
+    margin-bottom: 2em;
+    
+}
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    background-color: rgba(248, 250, 252, 0.30);
+    backdrop-filter: blur(4px);
+    padding: 1.8em 2em;
+    border-radius: 16px;
+    border: 2px solid #183153;
+    max-width: 520px;
+}
+
+.hero-content h1 {
+    color: #183153;
+        font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0 0 0.4em 0;
+    letter-spacing: 0.02em;
+}
+
+/*Hovedindhold*/
+
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+.cta {
+    display: flex;
+    gap: 1rem;
+}
+
+
+/*Generel styling*/
+
+
+body {
+    font-family: Plus Jakarta Sans, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f8fafc;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: Poppins, sans-serif;
+}
+
+h1{
+    text-transform: uppercase; /*Teksten transformeres til udelukkende at være store bogstaver*/
+    font-size: 60px;
+}
+
+.hero h1{
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    color: #f8fafc;
+    -webkit-text-stroke: 1px #183153; /*Tilføjer en sort outline til teksten*/
+    
+}
+.hero p{
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-top: 0.5em;
+    margin: 0 0 1.2em 0;
+    margin-bottom: 1em;
+    color: #183153;
+}
+
+/*knappen i hero sektionen*/
+.retro-mere {
+    display: inline-block;
+    background-color: #F4C95D;
+    color: #183153;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 0.75em 1.5em;
+    border-radius: 50px;
+    border: 2px solid #183153;
+    box-shadow: 4px 4px 0px #183153;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.retro-mere:hover,
+.retro-mere:focus {
+    background-color: #E87968;
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #183153;
+}
+
+
+.content-wrapper {
+    width: 100%;
+    margin: 25px 0 60px;
+}
+
+/*Gul boks i venstre side og små bokse i højre side*/
+.feature-layout {
+    display: grid;
+    grid-template-columns: 1.55fr 1fr;
+    column-gap: 100px;
+    align-items: stretch;
+}
+
+/*den gule boks inde i containeren*/
+.main-box {
+    background-color: #f3c65f;
+    border: 2px solid #26456e;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    min-height: 280px;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-box h2 {
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+.main-box p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 55ch;
+
+}
+
+.cta a{
+    color: #183153;
+    transition: 0.5s; /*skaber en mere blød overgang mellem linkfarverne*/
+}
+
+.cta a:hover {
+    color: #DD7824;
+    text-decoration: underline;
+}
+
+
+/*De små individuelle bokse med ikoner*/
+
+.small-boxes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 18px;
+    row-gap: 20px;
+}
+
+.small-box {
+    background-color: #f8fafc;
+    border: 2px solid #26456e;
+    border-radius: 16px;
+    min-height: 120px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    /* Flexbox for at styre indholdet bedre*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.small-box img {
+    max-width: 80%;
+    height: auto;
+    object-fit: contain;
+    margin: auto 0; /*centrerer ikon*/
+}
+
+.small-box p {
+    text-align: center;
+    margin: 0;
+   font-weight: 600;
+}
+
+/*infobokse på haanbog siden*/
+
+.infoboks-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 18px;
+    row-gap: 20px;
+}
+
+.infoboks {
+    background-color: #f3c65f;
+    border: 2px solid #26456e;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    min-height: 280px;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.infoboks-grid h2 {
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+.infoboks-grid p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 55ch;
+
+}
+
+/* Ikoner Gør i øjeblikket ikke noget */
+.ikoner {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+    height: 100px;
+    width: auto;
+    float: right;
+}
+
+.socialmedia {
+    margin-top: 1px;
+    height: 35px;
+    width: auto;
+}
+
+/*Håndbog opstilling*/
+.hero-2 {
+    position: relative;
+    max-width: 1000px;
+    margin: 1rem auto 2em;
+}
+
+.hero-2 > img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    height: auto;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 16px;
+    
+}
+
+.hero-content-2 {
+    position: absolute;
+    top: 50%;
+    left: clamp(1rem, 4vw, 2rem);
+    transform: translateY(-50%);
+    text-align: left;
+    background-color: rgba(248, 250, 252, 0.30);
+    backdrop-filter: blur(4px);
+    padding: 1.8em 2em;
+    border-radius: 16px;
+    border: 2px solid #183153;
+    width: min(520px, calc(100% - 2rem));
+}
+
+.hero-content-2 h1 {
+    color: #183153;
+    font-size: clamp(1.25rem, 4vw, 2.8rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0 0 0.4em;
+    letter-spacing: 0.02em;
+}
+
+.haandbog-main {
+    display: grid;
+    grid-template-columns: minmax(0,1fr);
+    gap: 2rem;
+}
+
+.haandbog-intro {
+    margin-bottom: 50px;
+}
+
+.haandbog-intro h2 {
+    line-height: 2;
+}
+
+.guide-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 18rem));
+    justify-content: center;
+    gap: 1rem;
+    column-gap: 18px;
+    row-gap: 20px;
+}
+
+.mere-info {
+    margin-top: 2rem;
+}
+
+.guide-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    width: 100%;
+    max-width: 18rem;
+    padding: 1.5rem;
+    border: 2px solid #26456e;
+    border-radius: 16px;
+    background: #f8fafc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.guide-card img {
+    max-width: 80%;
+    height: auto;
+    object-fit: contain;
+    align-self: center;
+    margin: auto 0; /*centrerer billede*/
+}
+
+.guide-card .retro-mere {
+    margin-top: auto;
+}
+
+/*kontaktside boks*/
+.boks-info {
+    background-color: #f8fafc;
+    min-height: 280px;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.boks-info-content {
+    width: 100%;
+    max-width: 55ch;
+    margin-inline: auto;
+    text-align: left;
+}
+
+.boks-info h2 {
+    font-size: 28px;
+    line-height: 1.2;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.boks-info h4 {
+    padding-bottom: 1rem;
+}
+
+.boks-info p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 55ch;
+
+}
+
+.kontaktinfo a {
+    color:#26456e
+}
+
+.kontaktinfo a:hover {
+    color: #E87968;
+    text-decoration: underline;
+}
+
+/*Kontaktform*/
+
+.kontaktform {
+  background-color: #f3c65f;
+  border: 2px solid #26456e;
+    border-radius: 16px;
+  padding: 1.3em;
+  width: 50%;
+  margin: 0 auto; /*Centrerer elementet på siden*/
+  margin-top: 20px;
+  margin-bottom: 20px;
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.kontakt-tekst{
+    font-weight: 200;
+    font-size: 18px;
+}
+
+input[type=text], input[type=email], input[type=tel], select, textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #26456e;
+    border-radius: 4px;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+}
+
+
+
+
+select, input[type=checkbox], input[type=radio] {
+    cursor: pointer;
+
+}
+
+fieldset{
+    border: 1px solid #F4C95D;
+    border-style: dotted;
+    margin-bottom: 0.8em;
+
+}
+
+input[type=checkbox]
+{
+    margin: 0.8em 0;
+}
+
+input[type=submit] {
+    display: inline-block;
+    background-color: #F4C95D;
+    color: #183153;
+    font-family: inherit;
+    font-weight: 700;
+    padding: 0.75em 1.5em;
+    border: 2px solid #183153;
+    border-radius: 50px;
+    box-shadow: 4px 4px 0px #183153;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+    width: 100%;
+    font-size: 18px;
+}
+
+input[type=submit]:hover,
+.input [type=submit]:focus {
+    background-color: #E87968;
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #183153;
+
+}
+::placeholder {
+  color: #1f1814;
+
+}
+
+/*Andre style elementer*/
+
+.visually-hidden{ /*WCAG defineret class som fjerner element fra skærm, men som stadig kan læses af skærmlæseren*/
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+
+/*footer til alle sider*/
+
+footer {
+    background-color: #26456e;
+    color: hsl(180, 100%, 100%);
+    padding: 2rem;
+    
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/*footer links*/
+
+footer a:hover {
+    color: #DD7824;
+    text-decoration: underline;
+}
+
+footer a {
+    color: #fff;
+}
+
+/*kontact information i footer*/
+.left-footer h4 {
+    margin-top: 0; 
+    margin-bottom: 0.5rem;
+}
+
+.left-footer p {
+    margin: 0.4rem 0;
+    line-height: 1.5;
+}
+
+/*højre side af footeren med links til sociale medier og copyright*/
+.right-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.right-footer h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 0.25rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-links a {
+    padding: 0.25rem;
+}
+
+.socialmedia {
+    width: 2.25rem;
+    height: 2.25rem;
+    object-fit: contain;
+}
+
+/*Så logo og copyright i footer kan så pænt*/
+.copyright {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.footer-logo {
+    height: 2rem;
+    width: 2rem;
+    object-fit: contain;
+}
+
+/*max-width - skærmen må maksimalt være denne størrelse og nedefter*/
+/*min-width - skærmen må minimalt være denne størrelse og opefter*/
+@media screen and (max-width: 768px) {
+    .tekst-img {
+        flex-direction: column;
+    }
+
+    nav #bars {
+        display: flex;
+        border: none;
+        background-color: transparent;
+        font-size: 2.3em;
+        color: #f3c65f;
+        cursor: pointer;
+    }
+
+    nav ul {
+        display: none;
+        height: auto;
+        border-top: 4px;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        display: flex;
+    }
+
+    nav .show {
+        display: flex;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        padding: 0;
+        background-color: #26456e;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .nav-menu.show li {
+    width: 100%;
+    justify-content: flex-end;
+}
+
+
+    /*Kalder på to elementer, som separeres med komma.*/
+    .tekst-img div,.tekst-img img {
+        width: 100%;
+    }
+
+    .cta {
+        flex-direction: column;
+    }
+
+    /*Regler for gule boks og grid på forsiden*/
+    
+
+    .feature-layout {
+        grid-template-columns: 1fr; /*stacker gul boks og de små bokse ovenpå hinanden*/
+        row-gap: 35px;
+    }
+
+    .small-boxes-grid {
+        row-gap: 18px;
+    }
+
+    .main-box {
+        min-height: auto;
+        padding: 25px;
+    }
+
+    .right-footer {
+        align-items: flex-start;
+    }
+
+/*Regler for guide-cards på håndbog siden*/
+
+.guide-grid {
+    grid-template-columns: 1fr;
+    row-gap: 35px;
+    justify-items: center;
+}
+
+}
+
+@media screen and (max-width: 480px) {
+    .hero-content-2 {
+        padding: 0.75em 1.2em;
+    }
+}

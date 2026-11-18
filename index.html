@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide til tryg online liv</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script><!--henter javascript fil ind. Her indsættes så HTML loader før JS-->
+    <script src="https://kit.fontawesome.com/8764c8bd7f.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+
+        <a class="logo" href="index.html"><img src="img/LogoDH.png" alt="logo er et skjold med DH skrevet"></a>
+
+        <!-- søgefelt i navigationsbaren -->
+         <form class="search-form" role="search" action="search.html" method=""get">
+        <label for="site-search" class="visually-hidden">
+            søg
+        </label>
+    
+        <input 
+            type="search"
+            id="site-search"
+            name="q"
+            placeholder="søg">
+        
+        <button type="submit" aria-label="søg">
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        </button></form>
+
+        
+         <!--bars til dropdown-->
+            <button
+                id="bars"
+                aria-expanded="false"
+                aria-controls="nav-menu"
+                aria-label="åben navigation">
+            
+                <!-- aria expansion fortæller skærmlæser at menu er lukket, mens aria-klabel giver besked om hvad knappen gør-->
+                 <!--button gør menuen trykbar med tastatur-->
+            <i class="fa-solid fa-bars"></i></button>
+
+         <!--Almindelig navigation-->
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">Forside</a></li>
+                <li><a href="haandbog.html">Håndbog</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+       <section class="hero">
+            <img class="hero-image" src="img/teenager-laptop-cover.jpg" alt="En ung pige sidder i en sofa og bruger en bærbar computer.">
+            <div class="hero-content">
+                <h1>Digital Håndbog</h1>
+                <p>Din digitale guide til et trygt online liv</p>
+        
+                <div class="hero-button">
+                    <a href="haandbog.html" class="retro-mere">Læs mere her</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-wrapper">
+            <div class="feature-layout">
+            <div class="main-box"> <!--venstre gul boks her-->
+                <h2>Vil du gerne lære mere om at begå dig sikkert online?</h2>
+                <p>På den Digitale Håndbog finder du en hurtig og nem guide til dit digitale liv. Uanset om du scroller på TikTok, snapper med vennerne på Snapchat eller snakker på Discord mens du gamer. Lær hvordan du beskytter dit privatliv, spotter AI i det fri og undgår at blive snydt på nettet.</p>
+            </div>
+
+            <!--Højre side med små bokse her-->
+            <div class="small-boxes-grid">
+                <div class="small-box">
+                    
+                    <img src="img/laptop.png">
+                    <p>AI - ChatGPT og Gemini</p>
+                </div> 
+                <div class="small-box">
+                   
+                    <img src="img/skjoldmobil.png">
+                     <p>Kommunikations platforme</p>
+                </div>
+                <div class="small-box">
+
+                    <img src="img/lockfiles.png">
+                    <p>Sikkerhed og backup</p>
+                </div>
+                <div class="small-box">
+                    <img src="img/SoMeIcon.png">
+                    <p>Guide til sociale medie platforme</p>
+                </div>
+            </div>
+            </div>
+
+        </section>
+
+
+        <section class="cta">
+            <div>
+                <h2>Ægte eller AI?</h2>
+                <p>AI-billeder og videoer er overalt i dit feed, men hvordan kan du skelne mellem hvad der er ægte og hvad der kke er? Læs med for at få tips til at gennemskue indholdet.</p>
+                <a href="#">Læs mere her</a>
+            </div>
+            <div>
+                <h2>Lås din digitale identitet</h2>
+                <p>Du kan selv bestemme hvem der ser dine billeder, videoer, reels, lokation og meget mere. Følg vores nemme guide til at finde dine privatindstillinger på de mest brugte apps og hjemmesider.</p>
+                <a href="#">Læs mere her</a>
+            </div>
+            <div>
+                <h2>Spot en svindler</h2>
+                <p>Din ven skriver pludselig en mærkelig besked om du vil teste et spil de har lavet? Det virker suspekt men hvorfor ikke? Lær at spotte bots og svindlere og undgå at blive hacket!</p>
+                <a href="#">Læs mere her</a>
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="left-footer">
+            <h4>Kontaktinfo</h4>
+            <p>Telefon: <a href="tel:25887799">25887799</a></p>
+            <p>Email: <a href="mailto:info@DGbog.dk">info@DGbog.dk</a></p>
+            <p>Adresse: <span>Gadenavn 1, 1234 Bynavn</span></p>
+          
+        </div>
+        
+        <div class="right-footer">
+            <h4>Sociale medier</h4>
+            <nav aria-label="Sociale medier">
+                <ul class="social-links">
+                    <li><a href="https://www.instagram.com/ibakolding/" target="_blank">
+                        <img src="img/icons/instagram.png" class="socialmedia" alt="Instagram icon">
+                    </a></li>
+                    <li><a href="https://www.facebook.com/IBAErhvervsakademiKolding" target="_blank">
+                        <img src="img/icons/facebook.png" class="socialmedia" alt="Facebook icon">
+                    </a></li>
+                </ul>
+            </nav>
+            <div class="copyright">
+                <p class="footer">&copy; 2026 Digital Håndbog</p>
+                <img src="img/logoplaceholder.png" alt="Digital håndbog logo i form af skjold" class="footer-logo">
+                
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
