@@ -1,0 +1,177 @@
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haandbog</title>
+     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script><!--henter javascript fil ind. Her indsættes så HTML loader før JS-->
+    <script src="https://kit.fontawesome.com/8764c8bd7f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- skip ned til hovedindhold-->
+     <a href="#ai-mainguide" class="screen-reader-text">Hop ned til sidens hovedindhold</a>
+
+    <!--Start navigation-->
+     <header>
+        <nav class="navbar">
+
+        <a class="logo" href="index.html"><img src="img/LogoDH.png" alt="logo er et skjold med DH for Digital Håndbog skrevet"></a>
+
+            <!-- søgefelt i navigationsbaren -->
+         <form class="search-form" role="search" action="search.html" method="get">
+        <label for="site-search" class="visually-hidden">
+            søg
+        </label>
+    
+        <input 
+            type="search"
+            id="site-search"
+            name="q"
+            placeholder="søg">
+        
+        <button type="submit" aria-label="søg">
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        </button></form>
+
+         <!--bars til dropdown-->
+            <button
+                id="bars"
+                aria-expanded="false"
+                aria-controls="nav-menu"
+                aria-label="åben navigation">
+            
+                <!-- aria expansion fortæller skærmlæser at menu er lukket, mens aria-klabel giver besked om hvad knappen gør-->
+                 <!--button gør menuen trykbar med tastatur-->
+            <i class="fa-solid fa-bars"></i></button>
+
+         <!--Almindelig navigation-->
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">Forside</a></li>
+                <li><a href="haandbog.html">Håndbog</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<main id="ai-mainguide">
+
+    <section class="hero-3">
+        
+            <div class="hero-content-2">
+                <h1>AI: ChatGPT og Gemini</h1>
+                <p>Få en bedre forståelse for hvad brugen af AI har af betydning for dig.</p>
+                
+            </div>
+        </section>
+
+        <section class="vend-tilbage">
+        <div class="hero-button">
+                    <a href="haandbog.html" class="retro-mere" alt="vend tilbage til håndbogens overblik">Tilbage til håndbogen</a>
+                </div>
+            </section>
+
+
+        <section class="guide-infoside">
+            <div class="infoboks-top-grid">
+                <div class="infoboks-guide">
+                <h2>Hvad er ChatGPT</h2>
+                <p>ChatGPT er en AI-software udviklet af OpenAI, Det er en chatbot som fungerer som en digital samtalepartner, hvor du kan stille spørgsmål og hurtigt få svar. </p>
+                <p>Dens svar er baseret på information den indsamler fra internettet: derfor kan svar være faktuelt forkerte. Det er vigtigt at du forholder dig kritisk i forhold til svar, især når det gælder emner som helbred og nyheder.</p>
+                <ul class="vigtige-punkter">
+                    <li><p>Kan bruges til kreative idéer</p></li>
+                    <li><p>Kan hurtigt svare på spørgsmål og finde kilder</p></li>
+                    <li><p>Kan forklare komplekse emner mere simpelt</p></li>
+                    <li><p>Kan hjælpe med at oversætte</p></li>
+                    <li><p>Kan hjælpe med at rette grammatik</p></li>
+                    <li><p>Hallucinerer fakta oftere</p></li>
+                    <li><p>Kan bruges både på app og browser</p></li>
+            </div>
+
+            <div class="infoboks-guide">
+                <h2>Hvad er Gemini?</h2>
+                <p>Googles AI assistent, og minder meget om ChatGPT ved første øjekast. Her kan du også få hjælp med spørgsmål, info og praktiske opgaver. Gemini og ChatGPT kan mange af de samme ting. 
+                </p>
+                <p>Eftersom Gemini er integreret med Google tjenester og trækker direkte fra Google når den søger i data, er den ekstra stærk til nyheder og aktuelle kilder. </p>
+                <ul class="vigtige-punkter">
+                    <li><p>Kan bruges til kreative idéer</p></li>
+                    <li><p>Kan hurtigt svare på spørgsmål og finde kilder</p></li>
+                    <li><p>Kan forklare komplekse emner mere simpelt</p></li>
+                    <li><p>Kan hjælpe med at oversætte</p></li>
+                    <li><p>Kan hjælpe med at rette grammatik</p></li>
+                    <li><p>Fungerer direkte i google tjenester som mail, google drev, docs, sheets og android</p></li>
+                    <li><p>Kan bruges både på app og browser</p></li>
+                </ul>
+                
+            </div>
+            </div>
+
+        </section>
+
+        <section class="guides-infoside">
+            
+            <div class="guide-info-grid">
+                <article class="guide-mini">
+        
+                    <h3>Dataindsamling</h3>
+                    <p>Disse chatbots indsamler data om brugeren, når der oprettes en konto. Undgå at dele dine eller andres personlige oplysninger, adresse, telefonnummer, CPR nummer, koder eller private billeder.</p>
+                </article>
+                <article class="guide-mini">
+        
+                    <h3>AI er IKKE et menneske!</h3>
+                    <p>Selvom man kan føle at chatten svarer som en forstående person, er det vigtigt at huske du skriver med en maskine. Prøv ikke at bruge en AI chat som erstatning for venner, familie eller professionelle.</p>
+                </article>
+                 <article class="guide-mini">
+                    <img src="img/icons/13+-icon.png" alt="Rundt ikon med 13 plus alder">
+                    <h3>Aldersgrænse på brug af ChatGPT i Danmark</h3>
+                    <p></p>
+                
+                </article>
+
+                  <article class="guide-mini">
+                    <img src="img/icons/15+-icon.png" alt="Rundt ikon med 15 plus alder">
+                    <h3>Aldersgrænse på brug af Gemini i  Danmark</h3>
+                    <p></p>
+                
+                </article>
+              
+            </div>
+        </section>
+
+
+</main>
+
+ <footer>
+        <div class="footer-content">
+            <div class="left-footer">
+            <h4>Kontaktinfo</h4>
+            <p>Telefon: <a href="tel:25887799">25887799</a></p>
+            <p>Email: <a href="mailto:info@DGbog.dk">info@DGbog.dk</a></p>
+            <p>Adresse: <span>Gadenavn 1, 1234 Bynavn</span></p>
+          
+        </div>
+        
+        <div class="right-footer">
+            <h4>Sociale medier</h4>
+            <nav aria-label="Sociale medier">
+                <ul class="social-links">
+                    <li><a href="https://www.instagram.com/ibakolding/" target="_blank">
+                        <img src="img/icons/instagram.png" class="socialmedia" alt="Instagram icon">
+                    </a></li>
+                    <li><a href="https://www.facebook.com/IBAErhvervsakademiKolding" target="_blank">
+                        <img src="img/icons/facebook.png" class="socialmedia" alt="Facebook icon">
+                    </a></li>
+                </ul>
+            </nav>
+            <div class="copyright">
+                <p class="footer">&copy; 2026 Digital Håndbog</p>
+                <img src="img/logoplaceholder.png" alt="Digital håndbog logo i form af skjold" class="footer-logo">
+                
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
